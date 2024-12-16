@@ -1,7 +1,7 @@
 num1=float(input("Enter the first number:"))
 num2=float(input("Enter the second number:"))
-opr=str(input("Choose the operation (+, -, *, /):"))
-result=int
+opr=(input("Choose the operation (+, -, *, /):"))
+result=float
 match opr:
     case "+":
         result=num1+num2
