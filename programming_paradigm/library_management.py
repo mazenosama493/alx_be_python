@@ -3,7 +3,7 @@ class Book:
         self.title=title
         self.author=author
         self.__is_checked_out=False
-    def get_state(self):
+    def return_book(self):
         return self.__is_checked_out
     def set_state(self,state):
         self.__is_checked_out=state
@@ -16,7 +16,7 @@ class Library :
         
     def list_available_books(self):
         for book in self.__books:
-            if book.get_state()==False:
+            if book.return_book()==False:
                 print(f"{book.title} by {book.author}")
     def check_out_book(self,title):
         for book in self.__books:
