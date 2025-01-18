@@ -1,7 +1,7 @@
 class Book:
-    def __init__(self,title,auther):
+    def __init__(self,title,author):
         self.title=title
-        self.auther=auther
+        self.author=author
         self.__is_checked_out=False
     def get_state(self):
         return self.__is_checked_out
@@ -10,14 +10,14 @@ class Book:
 class Library :
     def __init__(self):
         self.__books=[]
-    def add_book(self,title,auther):
-        book=Book(title,auther)
+    def add_book(self,title,author):
+        book=Book(title,author)
         self.__books.append(book)
         
     def list_available_books(self):
         for book in self.__books:
             if book.get_state()==False:
-                print(f"{book.title} by {book.auther}")
+                print(f"{book.title} by {book.author}")
     def check_out_book(self,title):
         for book in self.__books:
             if book.title==title :
